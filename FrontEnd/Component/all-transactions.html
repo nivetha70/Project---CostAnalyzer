@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <link rel="stylesheet" href="../Styles/Main.css" /> 
+    <title>All Transactions</title> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+</head> 
+
+<body> 
+    <div> 
+        <h3>All Transactions</h3> 
+    </div> 
+    <div id="items" class="alltranspage"> 
+        <table id="table"> 
+            <tr class="titles"> 
+                <th>S.no.</th> 
+                <th>Name</th> 
+                <th>Amount</th> 
+                <th>Type</th> 
+                <th>Delete</th> 
+            </tr> 
+        </table> 
+    </div>
+    <button onclick="downloadPDF()" class="downloadbtn">Download PDF</button>
+    <script src="../Scripts/AllTransactions.js"></script> 
+</body> 
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  
+<head> 
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <link rel="stylesheet" href="../Styles/Main.css" /> 
+    <title>Cost analyzer</title> 
+</head> 
+  
+<body> 
+    <div> 
+        <h3>COST ANALYZER</h3> 
+    </div> 
+    <div class="summary"> 
+        <div> 
+            <h1>✔ Balance: 
+                <span id="updatedBal"> 
+                      
+                </span> 
+            </h1> 
+        </div> 
+        <br /> 
+        <div class="total"> 
+            <div> 
+                Total Income: 
+                <div> 
+                    <h2 style="color: rgb(0, 98, 128);" id="updatedInc"> 
+                       
+                    </h2> 
+                </div> 
+            </div> 
+            <hr class="verticle" /> 
+            <div> 
+                Total Expenses: 
+                <div> 
+                    <h2 style="color: red;" id="updatedExp"> 
+                        
+                    </h2> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    <div class="root"> 
+        <div id="items"> 
+            <h2>Expenses</h2> 
+            <table id="table"> 
+                <tr class="titles"> 
+                    <!-- <th>S.no.</th>  -->
+                    <th>Name</th> 
+                    <th>Amount</th> 
+                    <th>Type</th> 
+                    <th>Delete</th> 
+                </tr> 
+            </table> 
+        </div> 
+        <button onclick="viewAll()" class="viewallbtn">View All</button>
+        <hr class="vertical" /> 
+        <div id="new"> 
+            <h2>Add new</h2> 
+  
+            <div class="inputs"> 
+                <div class="inputitem"> 
+                    <div>
+                        <p style="width: 9rem"> 
+                            Entry type: 
+                        </p>
+                    </div>
+                     <div>
+                        <select id='itemType'> 
+                            <option value="0">Expense</option> 
+                            <option value="1">Income</option> 
+                        </select> 
+                     </div>
+                    
+                </div> 
+                <div class="inputitem"> 
+                    <div>
+                        <p style="width: 9rem">Name:</p> 
+                    </div>
+                    <div>
+                    <input id="name" type="text" value="" placeholder="name" /> 
+                        </div>
+                </div> 
+                <div class="inputitem"> 
+                    <div>
+                        <p style="width: 9rem">Amount:</p> 
+                    </div>
+                    <div>
+                        <input value="0" id="amount" name="mod" type="number" placeholder="0" />
+                    </div>
+                     
+                </div> 
+            </div> 
+            <button onclick="addItem()"> 
+                Add 
+            </button> 
+        </div> 
+    </div> 
+    <script src="../Scripts/Main.js"></script> 
+</body> 
+  
+</html>
